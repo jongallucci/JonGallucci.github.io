@@ -1,18 +1,18 @@
-var fontRobotoMono;
+let fontRobotoMono;
 
 function preload() {
   fontRobotoMono = loadFont('RobotoMono-Regular.ttf');
 }
 
-var string = "  welcome  ";
-var correctChars = [];
+let string = "  welcome  ";
+let correctChars = [];
 
 function setup() {
   createCanvas(windowWidth - 15, 400);
   background(51);
   frameRate(9);
 
-  for (var i = 0; i < string.length; i++) {
+  for (let i = 0; i < string.length; i++) {
     correctChars.push(false);
   }
 }
@@ -21,7 +21,7 @@ function draw() {
   background(51);
 
   chanceToCorrectChars();
-  var randStr = randString(string);
+  let randStr = randString(string);
   textFont(fontRobotoMono);
   textSize(46);
   textAlign(CENTER);
@@ -30,15 +30,15 @@ function draw() {
 }
 
 function randString(str) {
-  var randStr = [];
-  for (var i = 0; i < str.length; i++) { // 33 -> 126
+  let randStr = [];
+  for (let i = 0; i < str.length; i++) { // 33 -> 126
     randStr.push(String.fromCharCode(round(random(64, 126))));
   }
   return correctCharsInString(randStr);
 }
 
 function correctCharsInString(randStr) {
-  for (var i = 0; i < randStr.length; i++) {
+  for (let i = 0; i < randStr.length; i++) {
     if (correctChars[i])
       randStr[i] = string[i];
   }
@@ -46,7 +46,7 @@ function correctCharsInString(randStr) {
 }
 
 function chanceToCorrectChars() {
-  for (var i = 0; i < correctChars.length; i++) {
+  for (let i = 0; i < correctChars.length; i++) {
     if (random(1) < 0.065) {
       correctChars[i] = true;
     }
