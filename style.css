@@ -1,9 +1,11 @@
 body {
     background-color: #282828;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 p, h1 {
-    font-family: RobotoMono-Regular;
+    font-family: 'Roboto Mono';
     color: #5AC83E;
     word-wrap: break-word;
     min-width: 300px;
@@ -18,11 +20,15 @@ h1 {
 p { 
     font-size: 30px;
     margin: 18px auto;
+}
+
+.manText{
     max-width: 1000px;
 }
 
 a {
-    color: #FFF;
+    color: rgb(204, 194, 194);
+    text-decoration: none;
 }
 
 .description {
@@ -42,4 +48,14 @@ a {
 
 #lCommand {
     margin-top: 80px;
+}
+
+#welcome-sketch {
+    width: 100vw;
+    height: 30rem; /* also needs to be set in sketch.js:getCanvasHeightInPx */
+    overflow: hidden;
+}
+
+#phone {
+    color: rgb(204, 194, 194);
 }
