@@ -1,16 +1,17 @@
 var fontRobotoMono;
 
-// load font
-function preload() {
-  fontRobotoMono = loadFont('RobotoMono-Regular.ttf');
-}
-
 var salutation = "  welcome  ";
 var correctChars = [];
 
+function getCanvasHeightInPx(){
+  const heightRem = 30;
+  const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+  return heightRem * remInPx;
+}
+
 // create canvas and set basic fields
 function setup() {
-  var canvas = createCanvas(windowWidth - 15, windowHeight / 2);
+  var canvas = createCanvas(windowWidth - 15, getCanvasHeightInPx());
   background(51);
   frameRate(8);
   canvas.parent("welcome-sketch");
@@ -31,8 +32,8 @@ function draw() {
   var randStr = randString(salutation);
 
   // basic settings
-  textFont(fontRobotoMono);
-  textSize(windowWidth / 14);
+  textFont("Roboto Mono");
+  textSize(getCanvasHeightInPx() / 3);
   textAlign(CENTER);
   fill(90, 200, 62);
   text(randStr, width / 2, height / 2);
@@ -53,8 +54,8 @@ function draw() {
     }
 
 
-    textSize(windowWidth / 20);
-    text(intro, width / 2, height / 2 + windowWidth / 14);
+    textSize(getCanvasHeightInPx() / 4.28571428571);
+    text(intro, width / 2, height / 2 + getCanvasHeightInPx() / 3);
   }
 }
 
@@ -88,5 +89,5 @@ function chanceToCorrectChars() {
 
 // Resizes the canvas window
 function windowResized() {
-  resizeCanvas(windowWidth - 15, windowHeight / 2);
+  resizeCanvas(windowWidth - 15, getCanvasHeightInPx());
 }
