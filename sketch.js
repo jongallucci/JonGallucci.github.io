@@ -26,7 +26,7 @@ function setup() {
 let counter = 0;
 let numLettersToDisplay = 1;
 function draw() {
-  background(40);
+  background(30);
 
   chanceToCorrectChars();
   const randStr = randString(salutation);
