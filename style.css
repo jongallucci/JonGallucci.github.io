@@ -1,0 +1,45 @@
+body {
+    background-color: #282828;
+}
+
+p, h1 {
+    font-family: RobotoMono-Regular;
+    color: #5AC83E;
+    word-wrap: break-word;
+    min-width: 300px;
+    max-width: 1300px;
+}
+
+h1 {
+    font-size: 34px;
+    margin: 28px auto;
+}
+
+p { 
+    font-size: 30px;
+    margin: 18px auto;
+    max-width: 1000px;
+}
+
+a {
+    color: #FFF;
+}
+
+.description {
+    margin: 12px auto;
+    margin-left: 50px;
+    max-width: 700px;
+}
+
+.gt {
+    font-weight: 900;
+    color: rgb(99, 114, 102);
+}
+
+.name {
+    font-size: 31px;
+}
+
+#lCommand {
+    margin-top: 80px;
+}

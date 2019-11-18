@@ -1,0 +1,24 @@
+{
+  "name": "jongallucci.github.io",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jongallucci/jongallucci.github.io.git"
+  },
+  "author": "Jon Gallucci",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jongallucci/jongallucci.github.io/issues"
+  },
+  "homepage": "https://github.com/jongallucci/jongallucci.github.io#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
