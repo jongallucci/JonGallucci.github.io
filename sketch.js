@@ -1,4 +1,11 @@
-let fontRobotoMono;
+const lines = new Image();
+lines.src = 'http://i.imgur.com/TAJ0Zkw.png';
+
+window.addEventListener('load', fakeCRT, false);
+
+function fakeCRT() {
+
+}
 
 const salutation = '  welcome  ';
 const correctChars = [];
@@ -12,7 +19,7 @@ function getCanvasHeightInPx() {
 // create canvas and set basic fields
 function setup() {
   const canvas = createCanvas(windowWidth - 15, getCanvasHeightInPx());
-  background(51);
+  background(29, 31, 29);
   frameRate(8);
   canvas.parent('welcome-sketch');
 

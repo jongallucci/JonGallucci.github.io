@@ -1,7 +1,6 @@
 body {
     /* background-color: #282828; */
     background-color: rgb(29, 31, 29);
-
     margin: 0;
     overflow-x: hidden;
 }
@@ -31,7 +30,7 @@ a {
 }
 
 .header {
-    margin: auto;
+    margin: 0px auto;
     max-width: 65rem;
 }
 
@@ -60,15 +59,39 @@ a {
     background-color: #282828;
 
     border-radius: 0.7rem;
-    border-color: rgb(45, 54, 43);
+    border-color: rgb(40, 41, 40);
     border-width: thin;
     border-style: solid;
     min-width: 300px;
     max-width: 1300px;
     margin: 0px auto;
     margin-top: 40px;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
+
+    /* position: relative;
+    background: url('crt.png') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; */
 }
+
+.crt {
+    position: relative;
+    object-fit: fill;
+}
+
+img.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: contrast(200%) brightness(60%);
+    height: 100%;
+}
+
+.element { overflow: -moz-scrollbars-none; }
+.element { -ms-overflow-style: none; }
+.element::-webkit-scrollbar { width: 0 !important }
 
 #welcome-sketch {
     width: 100vw;
