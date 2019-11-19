@@ -9,7 +9,7 @@ function getCanvasHeightInPx() {
 
 // create canvas and set basic fields
 function setup() {
-  const canvas = createCanvas(windowWidth - 15, getCanvasHeightInPx());
+  const canvas = createCanvas(windowWidth - 15, windowHeight * 0.4);
   background(29, 31, 29);
   frameRate(8);
   canvas.parent('welcome-sketch');
@@ -53,7 +53,7 @@ function draw() {
 
 
     textSize(min((height / 8), (width / 14)));
-    text(intro, width / 2, height / 2 + height / 3);
+    text(intro, width / 2, height / 2 + height / 5);
   }
 }
 
