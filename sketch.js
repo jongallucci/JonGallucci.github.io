@@ -1,17 +1,8 @@
-const lines = new Image();
-lines.src = 'http://i.imgur.com/TAJ0Zkw.png';
-
-window.addEventListener('load', fakeCRT, false);
-
-function fakeCRT() {
-
-}
-
 const salutation = '  welcome  ';
 const correctChars = [];
 
 function getCanvasHeightInPx() {
-  const heightRem = 30;
+  const heightRem = 20;
   const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
   return heightRem * remInPx;
 }
@@ -33,14 +24,14 @@ function setup() {
 let counter = 0;
 let numLettersToDisplay = 1;
 function draw() {
-  background(30);
+  background(29, 31, 29);
 
   chanceToCorrectChars();
   const randStr = randString(salutation);
 
   // basic settings
   textFont('Roboto Mono');
-  textSize(min((height / 3), (width / 8)));
+  textSize(min((height / 4), (width / 10)));
   textAlign(CENTER);
   fill(90, 200, 62);
   text(randStr, width / 2, height / 2);
