@@ -43,7 +43,7 @@ li::before {
     color: rgb(99, 114, 102);
     display: inline-block;
     position: absolute;
-    transform: translateX(-1.5rem);
+    transform: translateX(-1.0rem);
 }
 
 a {
@@ -107,7 +107,6 @@ img.cover {
     position: absolute;
     top: 0;
     left: 0;
-    /* filter: contrast(200%) brightness(200%); */
     filter: invert(1) brightness(20%) contrast(70%);
     height: 100%;
     width: 100%;
@@ -133,7 +132,6 @@ span.break {
 }
 
 section {
-    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-name: float;
 
@@ -151,31 +149,31 @@ section {
     -moz-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 
-    -webkit-animation-duration:0.7s;
-    -moz-animation-duration:0.7s;
-    animation-duration:0.7s;
+    -webkit-animation-duration:0.4s;
+    -moz-animation-duration:0.4s;
+    animation-duration:0.4s;
 }
 
 #manJon {
-    animation-delay: 4.6s;
+    animation-delay: 3.0s;
 }
 
 #manOutput {
     margin-bottom: 40px;
-    animation-delay: 5.6s;
+    animation-delay: 4.0s;
 }
 
 #commandlineBottom {
-    animation-delay: 6.9s;
+    animation-delay: 4.3s;
 }
 
 @keyframes moveup {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
-        -ms-transform: translateY(50px);
-        transform: translateY(50px);       
+        -webkit-transform: translateY(60px);
+        transform: translateY(60px);
+        -ms-transform: translateY(60px);
+        transform: translateY(60px);       
     }
     100% {
         opacity: 1;

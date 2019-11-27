@@ -11,7 +11,7 @@ function getCanvasHeightInPx() {
 function setup() {
   const canvas = createCanvas(windowWidth - 15, windowHeight * 0.4);
   background(29, 31, 29);
-  frameRate(8);
+  frameRate(14);
   canvas.parent('welcome-sketch');
 
   // make a bool array for
@@ -36,15 +36,17 @@ function draw() {
   fill(90, 200, 62);
   text(randStr, width / 2, height / 2);
 
-  if (counter > 30) {
+  if (counter > 26) {
     // blinky effect of cursor
+
     let intro = 'to my manpage ';
     if (counter % 4 === 0) {
       intro = 'to my manpage_';
     }
 
+
     // prints out intro string
-    if (counter < intro.length + 30) {
+    if (counter < intro.length + 26) {
       whitespace = '              '.substring(0, intro.length - numLettersToDisplay - 1);
       intro = intro.substring(0, numLettersToDisplay);
       intro = intro + '_' + whitespace;
@@ -70,7 +72,7 @@ function randString(str) {
 function correctCharsInString(randStr) {
   counter++;
   for (let i = 0; i < randStr.length; i++) {
-    if (correctChars[i] || counter > 28) {
+    if (correctChars[i] || counter > 25) {
       randStr[i] = salutation[i];
     }
   }
@@ -80,7 +82,7 @@ function correctCharsInString(randStr) {
 // has a chance to turn into correct char instead of random char
 function chanceToCorrectChars() {
   for (let i = 0; i < correctChars.length; i++) {
-    if (random(1) < 0.08) {
+    if (random(1) < 0.07) {
       correctChars[i] = true;
     }
   }
