@@ -108,10 +108,39 @@ img.cover {
     top: 0;
     left: 0;
     filter: invert(1) brightness(20%) contrast(70%);
-    height: 350%;
+    height: 100%;
     width: 100%;
     pointer-events: none;
 }
+
+@media only screen and (max-width: 1200px) {
+    img.cover {
+        width: 250%;
+        left: -50%;
+    }
+}
+
+@keyframes flickerEffect1 { 
+    0%   {opacity: 1;} 
+    25%  {opacity: 0.97} 
+    30%  {opacity: 1;} 
+    90%  {opacity: 0.94;}
+    100% {opacity: 1;} 
+} 
+/* .flicker1 { 
+    animation: flickerEffect1 0.8s ease infinite; 
+} */
+
+@keyframes flickerEffect2 { 
+    0%   {opacity: 1;} 
+    25%  {opacity: 0.97;} 
+    30%  {opacity: 1;} 
+    90%  {opacity: 0.95;}
+    100% {opacity: 1;} 
+} 
+/* .flicker2 { 
+    animation: flickerEffect2 1.6s ease infinite; 
+} */
 
 span.break {
     display: inline-block;
